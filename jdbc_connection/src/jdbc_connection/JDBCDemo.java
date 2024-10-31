@@ -17,6 +17,10 @@ public class JDBCDemo {
 		username, password);
 		System.out.println("Established Connection");
 		
+		 conn.close();
+		 
+
+		
 	}
 
 }
