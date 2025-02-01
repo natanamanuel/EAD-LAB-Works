@@ -33,4 +33,8 @@ public class AnnouncementService {
     	announcement.setContent(content);
         announcementRepository.save(announcement);
     }
+    
+    public void deleteAnnouncement(Long id) {
+    	announcementRepository.deleteById(id);
+    }
 }

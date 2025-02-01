@@ -6,75 +6,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Login - Online Voting System</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
-            margin: 0;
-            padding: 0;
-        }
-        .login-container {
-            max-width: 400px;
-            margin: 50px auto;
-            padding: 20px;
-            background-color: white;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            border-radius: 8px;
-        }
-        .login-container h2 {
-            text-align: center;
-            margin-bottom: 20px;
-            color: #007bff;
-        }
-        form {
-            display: flex;
-            flex-direction: column;
-        }
-        form label {
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-        form input {
-            margin-bottom: 15px;
-            padding: 10px;
-            font-size: 14px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-        form button {
-            padding: 10px;
-            font-size: 16px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        form button:hover {
-            background-color: #0056b3;
-        }
-        .error {
-            color: red;
-            text-align: center;
-            margin-top: 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="/css/styles.css"> <!-- Link to external CSS file -->
 </head>
 <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <img src="/images/logo.jpg" alt="Logo"> <!-- Replace with your logo image -->
+        </div>
+        <div class="navbar-buttons">
+            <a href="/" class="btn-nav">Home</a>
+        </div>
+    </nav>
+
+    <!-- Admin Login Form -->
     <div class="login-container">
         <h2>Admin Login</h2>
         <form action="/admin/login" method="post">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" placeholder="Enter username" required>
-            
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" placeholder="Enter password" required>
-            
-            <button type="submit">Login</button>
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" placeholder="Enter username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter password" required>
+            </div>
+            <button type="submit" class="btn-login">Login</button>
         </form>
         <c:if test="${not empty error}">
-            <p class="error">${error}</p>
+            <p class="error-message">${error}</p>
         </c:if>
     </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-social">
+            <h3>Follow Us</h3>
+            <a href="https://www.facebook.com/EthioNDC">Facebook</a>
+            <a href="https://twitter.com/EthioNDC">Twitter</a>
+            <a href="https://t.me/EtNationalDialogue">Telegram</a>
+            <a href="https://www.tiktok.com/@ethiondc">Tiktok</a>
+            <a href="https://youtube.com/@ENDC317?si=NYZbzI6KRteGRDQL">YouTube</a>
+        </div>
+        <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <p>Phone: +251-111-261196</p>
+            <p>Phone: +251-111-261428</p>
+            <p>Email: ethiopianndc@gmail.com</p>
+        </div>
+        <div class="footer-copyright">
+            <p>&copy; 2025 Ethiopian National Dialogue Commission. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>

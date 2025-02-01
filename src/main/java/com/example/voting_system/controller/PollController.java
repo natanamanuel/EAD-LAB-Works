@@ -5,13 +5,14 @@ import com.example.voting_system.service.PollService;
 import com.example.voting_system.service.PollServiceTwo;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 
-
-@RestController
+@Controller
+//@RestController
 @RequestMapping("/api/polls")
 public class PollController {
 
@@ -32,7 +33,7 @@ public class PollController {
     @PostMapping("/create")
     public String createPoll(@ModelAttribute Poll poll, @RequestParam("options") List<String> options) {
     	pollService.createPollWithOptions(poll, options);
-        return "redirect:/admin/dashboard";
+    	return "redirect:/admin/dashboard/manage_polls";
     }
     
     //ADDED
@@ -41,13 +42,13 @@ public class PollController {
                              @RequestParam String title, 
                              @RequestParam String description) {
     	pollServiceTwo.updatePollTwo(pollId, title, description);
-        return "redirect:/admin/dashboard";
+    	return "redirect:/admin/dashboard/manage_polls";
     }
 
     @PostMapping("/delete/{pollId}")
     public String deletePoll(@PathVariable Long pollId) {
     	pollServiceTwo.deletePoll(pollId);
-        return "redirect:/admin/dashboard";
+    	return "redirect:/admin/dashboard/manage_polls";
     }
     //ADDED
 
@@ -68,6 +69,7 @@ public class PollController {
 //        return "Poll deleted successfully.";
 //    }
 }
+
 
 
 

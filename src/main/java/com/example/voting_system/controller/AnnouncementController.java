@@ -53,4 +53,10 @@ public class AnnouncementController {
     	announcementService.updateAnnouncement(announcementId, title, content);
         return "redirect:/announcements/admin/view";
     }
+    
+    @PostMapping("/admin/delete/{announcementId}")
+    public String deleteAnnouncement(@PathVariable Long announcementId) {
+    	announcementService.deleteAnnouncement(announcementId);
+        return "redirect:/announcements/admin/view";
+    }
 }

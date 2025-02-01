@@ -1,52 +1,1100 @@
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
     margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-logo img {
+    height: 50px; /* Adjust based on your logo size */
+}
+
+.navbar-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-nav {
+    padding: 10px 20px;
+    background-color: #ff8c42; /* Orange color */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-nav:hover {
+    background-color: #e67332; /* Darker orange on hover */
+}
+
+/* Header */
+.header {
+    background-color: #ffa500;
+    color: #808000;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+/* Introduction Section */
+.introduction {
+    padding: 20px;
+    text-align: center;
+    background-color: white;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.introduction p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Buttons Section */
+.buttons-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.button-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.button-container p {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.btn-main {
+    padding: 15px 30px;
+    background-color: #ffa500;
+    color: #808080;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    width: 200px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.btn-main:hover {
+    background-color: #e67332;
+}
+
+/* Upcoming, Announcements, and Polls Section */
+.upcoming-section {
+    padding: 20px;
+    background-color: white;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.upcoming-section h2 {
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.upcoming-section ul {
+    list-style-type: none;
     padding: 0;
 }
 
-.container {
-    max-width: 400px;
-    margin: 50px auto;
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.upcoming-section ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
 }
 
-h2 {
+.upcoming-section ul li:last-child {
+    border-bottom: none;
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-social, .footer-contact, .footer-copyright {
+    flex: 1;
+    padding: 10px;
     text-align: center;
+}
+
+.footer-social a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin: 5px 0;
+}
+
+.footer-social a:hover {
+    text-decoration: underline;
+}
+
+.footer-contact p {
+    margin: 5px 0;
+}
+
+.footer-copyright {
+    font-size: 14px;
+    color: #ccc;
+}
+
+
+
+
+
+
+/* Login Container */
+.login-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.login-container h2 {
+    color: #ff8c42; /* Orange color */
     margin-bottom: 20px;
 }
 
 .form-group {
     margin-bottom: 15px;
+    text-align: left;
 }
 
-label {
+.form-group label {
     display: block;
+    font-weight: bold;
     margin-bottom: 5px;
+    color: #555;
 }
 
-input, select, button {
+.form-group input {
     width: 100%;
     padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
+    font-size: 16px;
+    border: 1px solid #ddd;
     border-radius: 5px;
+    box-sizing: border-box;
 }
 
-button {
-    background-color: #007bff;
+.btn-login {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #ff8c42; /* Orange color */
     color: white;
     border: none;
+    border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-button:hover {
-    background-color: #0056b3;
+.btn-login:hover {
+    background-color: #e67332; /* Darker orange on hover */
 }
 
-p {
+.error-message {
+    color: red;
+    margin-top: 10px;
+}
+
+.btn-home {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ff8c42; /* Orange color */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-home:hover {
+    background-color: #e67332; /* Darker orange on hover */
+}
+
+
+
+
+
+
+
+/* Registration Container */
+.register-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
     text-align: center;
+}
+
+.register-container h2 {
+    color: #ff8c42; /* Orange color */
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.btn-register {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #ff8c42; /* Orange color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-register:hover {
+    background-color: #e67332; /* Darker orange on hover */
+}
+
+
+
+
+
+/* Introduction Text */
+.introduction ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+/* Buttons Section */
+.buttons-section {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.btn-main {
+    padding: 15px 30px;
+    background-color: #ff8c42; /* Orange color */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-main:hover {
+    background-color: #e67332; /* Darker orange on hover */
+}
+
+/* Polls Section */
+.polls-section {
+    padding: 20px;
+    background-color: white;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.poll-container {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.poll-container h3 {
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.poll-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.btn-poll {
+    padding: 10px 20px;
+    background-color: #ff8c42; /* Orange color */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-poll:hover {
+    background-color: #e67332; /* Darker orange on hover */
+}
+
+/* Logout Button */
+.logout-section {
+    text-align: center;
+    margin: 20px;
+}
+
+.btn-logout {
+    padding: 10px 20px;
+    background-color: #dc3545; /* Red color for logout */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-logout:hover {
+    background-color: #c82333; /* Darker red on hover */
+}
+
+
+
+
+
+
+
+/* Dashboard Button */
+.dashboard-button {
+    text-align: center;
+    margin: 20px;
+}
+
+.btn-main {
+    padding: 15px 30px;
+    background-color: #ff8c42; /* Orange color */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-main:hover {
+    background-color: #e67332; /* Darker orange on hover */
+}
+
+/* Poll Information Section */
+.poll-info {
+    padding: 20px;
+    background-color: white;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.poll-info h2 {
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.poll-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.poll-table th, .poll-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.poll-table th {
+    background-color: #f4f4f9;
+}
+
+/* Poll Options Section */
+.poll-options {
+    padding: 20px;
+    background-color: white;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.poll-options h2 {
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.options-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.options-table th, .options-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.btn-option {
+    padding: 10px 20px;
+    background-color: #ff8c42; /* Orange color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-option:hover {
+    background-color: #e67332; /* Darker orange on hover */
+}
+
+
+
+
+
+
+
+/* Text Section */
+.text-section {
+    padding: 20px;
+    background-color: white;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.text-section p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Dashboard Button */
+.dashboard-button {
+    text-align: center;
+    margin: 20px;
+}
+
+.btn-main {
+    padding: 15px 30px;
+    background-color: #ff8c42; /* Orange color */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-main:hover {
+    background-color: #e67332; /* Darker orange on hover */
+}
+
+/* Poll Information Section */
+.poll-info {
+    padding: 20px;
+    background-color: white;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.poll-info h2 {
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.poll-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.poll-table th, .poll-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.poll-table th {
+    background-color: #f4f4f9;
+}
+
+/* Poll Results Section */
+.poll-results {
+    padding: 20px;
+    background-color: white;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.poll-results h2 {
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.results-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.results-table th, .results-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.results-table th {
+    background-color: #f4f4f9;
+}
+
+
+
+
+
+
+
+/* Text Section */
+.text-section {
+    padding: 20px;
+    background-color: white;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.text-section h2 {
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+/* Announcements Section */
+.announcements-section {
+    padding: 20px;
+    background-color: white;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.announcement {
+    margin-bottom: 20px;
+}
+
+.announcement h3 {
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.announcement p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.announcement-date {
+    font-size: 14px;
+    color: #777;
+}
+
+
+
+
+
+.error-message {
+    color: red;
+    margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Create Poll Page Specific Styles */
+
+.form-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.form-group textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+.btn-add-option {
+    padding: 10px 20px;
+    background-color: #28a745; /* Green color for the add option button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-add-option:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.btn-submit {
+    padding: 10px 20px;
+    background-color: #007bff; /* Blue color for the submit button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.btn-back {
+    padding: 10px 20px;
+    background-color: #6c757d; /* Gray color for the back button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-back:hover {
+    background-color: #5a6268; /* Darker gray on hover */
+}
+
+
+
+
+
+
+
+
+/* Manage Polls Page Specific Styles */
+.table-container {
+    margin: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.poll-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.poll-table th, .poll-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.poll-table th {
+    background-color: #f4f4f9;
+    font-weight: bold;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+}
+
+.inline-form {
+    display: inline;
+}
+
+.btn-update {
+    padding: 5px 10px;
+    background-color: #28a745; /* Green color for update button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-update:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+.btn-delete {
+    padding: 5px 10px;
+    background-color: #dc3545; /* Red color for delete button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-delete:hover {
+    background-color: #c82333; /* Darker red on hover */
+}
+
+.btn-results {
+    padding: 5px 10px;
+    background-color: #007bff; /* Blue color for results button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-results:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.back-button {
+    text-align: center;
+    margin: 20px;
+}
+
+.btn-back {
+    padding: 10px 20px;
+    background-color: #6c757d; /* Gray color for back button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-back:hover {
+    background-color: #5a6268; /* Darker gray on hover */
+}
+
+
+
+
+
+
+
+
+
+/* Admin Vote Result Page Specific Styles */
+
+.poll-info, .poll-results {
+    margin: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.poll-info h2, .poll-results h2 {
+    color: #007bff; /* Blue color for headings */
+    margin-bottom: 20px;
+}
+
+.poll-table, .results-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.poll-table th, .poll-table td, .results-table th, .results-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.poll-table th, .results-table th {
+    background-color: #f4f4f9;
+    font-weight: bold;
+}
+
+.back-button {
+    text-align: center;
+    margin: 20px;
+}
+
+.btn-back {
+    padding: 10px 20px;
+    background-color: #6c757d; /* Gray color for back button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-back:hover {
+    background-color: #5a6268; /* Darker gray on hover */
+}
+
+
+
+
+
+
+
+
+
+/* Create Announcement Page Specific Styles */
+
+.form-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.form-group textarea {
+    resize: vertical;
+    height: 150px;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.btn-submit {
+    padding: 10px 20px;
+    background-color: #007bff; /* Blue color for the submit button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.btn-back {
+    padding: 10px 20px;
+    background-color: #6c757d; /* Gray color for the back button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-back:hover {
+    background-color: #5a6268; /* Darker gray on hover */
+}
+
+
+
+
+
+
+
+
+
+/* View Admin Announcements Page Specific Styles */
+
+.announcements-list {
+    margin: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.announcement {
+    margin-bottom: 20px;
+}
+
+.announcement h3 {
+    color: #007bff; /* Blue color for announcement titles */
+    margin-bottom: 10px;
+}
+
+.announcement p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.announcement-date {
+    font-size: 14px;
+    color: #777;
+}
+
+.announcement-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.inline-form {
+    display: inline;
+}
+
+.btn-update {
+    padding: 5px 10px;
+    background-color: #28a745; /* Green color for update button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-update:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+.btn-delete {
+    padding: 5px 10px;
+    background-color: #dc3545; /* Red color for delete button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-delete:hover {
+    background-color: #c82333; /* Darker red on hover */
+}
+
+.back-button {
+    text-align: center;
+    margin: 20px;
+}
+
+.btn-back {
+    padding: 10px 20px;
+    background-color: #6c757d; /* Gray color for back button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-back:hover {
+    background-color: #5a6268; /* Darker gray on hover */
 }
